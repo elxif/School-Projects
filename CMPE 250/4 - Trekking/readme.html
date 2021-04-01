@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="file:///Users/ea2/.markdownNavigator/multimarkdown_layout.css">
+<style>
+
+body.multimarkdown-preview,
+body.multimarkdown-wiki-preview {
+    font-size: 11px;
+}
+</style>
+<link rel="stylesheet" href="file:///Users/ea2/.markdownNavigator/multimarkdown_darcula.css">
+</head>
+<body class="multimarkdown-preview">
+<div class="content">
+<div class="page-header"><a href="https://github.com/Cmpe-250/cmpe250-assignment4-elxif/blob/master/README.md" name="wikipage" id="wikipage" title="Click here to open the file on GitHub">README.md</a></div>
+<div class="hr"></div>
+<h1 id="cmpe-250-assignment-4" md-pos="2-23"><a href="#cmpe-250-assignment-4" name="cmpe-250-assignment-4">Cmpe 250 Assignment 4</a></h1>
+<ul>
+  <li md-pos="25-81"><strong md-pos="29-38">Deadline:</strong> 03.12.2019 Tuesday @23:00, very strict.</li>
+  <li md-pos="81-245">For your questions on the project, please contact with your student teaching assistant Kayacan Vesek via <a href="mailto:kayacanvesek@gmail.com" md-pos="188-243">kayacanvesek@gmail.com</a>.</li>
+</ul>
+<h2 id="description" md-pos="249-260"><a href="#description" name="description">Description</a></h2>
+<p md-pos="262-439">Five CmpE students would like to go to the Ancient Anti-Taurus Montains Range, and they are trying to reach the Kizilkaya summit. You are asked to help them with their journey.</p>
+<p md-pos="440-585">In Anti-Taurus Mountains, there are N registered nodes (i.e., reference points to find the way in the mountains) and M undirected two-way edges.</p>
+<p md-pos="586-848"><strong md-pos="588-594">Nodes:</strong> The nodes are numbered with integers from 1 to N inclusively. Node 1, Ironpicket camping area, is the starting point for all mountaineers, who comes to Anti-Taurus Mountains. The summit is on the K^th node (so the mountaineers wants to reach node K).</p>
+<p md-pos="849-948"><strong md-pos="851-857">Edges:</strong> Each undirected edge has a time value, which indicates the duration to cover the edge.</p>
+<p md-pos="949-1010">5 CmpE students try different approches to reach the summit.</p>
+<ul>
+  <li md-pos="1011-1144">The goal of the <strong md-pos="1031-1044">first student</strong> is to reach the summit as fast as possible in terms of time, so s(he) follows the shortest path.</li>
+  <li md-pos="1144-1428">The <strong md-pos="1152-1166">second student</strong> does not like to walk through long edges, so goal of the second student is to reach the summit by walking through the edges that takes shorter time. Therefore, (s)he wants to minimize the duration of the maximum edge (s)he takes in his/her way to the summit.</li>
+  <li md-pos="1428-1691">The <strong md-pos="1436-1449">third student</strong> does not care about the time each edge takes, so all edges are same for him/her. (S)he wants to visit as less node as possible. In another words, his/her goal is to find a way to the summit that passes through the minimum number of edges.</li>
+  <li md-pos="1691-2023">The <strong md-pos="1699-1713">fourth student</strong> is greedy and when (s)he is in a node, (s)he chooses the shortest edge out of that node. However, (s)he can use the same edge only once. When (s)he reaches the summit, his/her journey finishes. Note that when there are two shortest edges with same length, (s)he picks the one with the lower edge number(i).</li>
+  <li md-pos="2023-2557">The <strong md-pos="2031-2044">fifth student</strong> has a secret power, (s)he can teleport between adjacent nodes, so it takes 0 time to travel between them. However, to recharge that secret power, (s)he needs to pass two edges, and (s)he does not have that secret power at the beginning of his/her journey. Unlike other four students, (s)he can use the same edge multiple times, so in the first move, (s)he may go N_1-&gt;N_2 and N_2-&gt;N_1 to recharge his/her secret power. (S)he cannot store his/her secret power and must use it right away after after gaining it.</li>
+</ul>
+<p md-pos="2558-2692"><strong md-pos="2560-2575">Important note:</strong> Only <strong md-pos="2585-2598">fifth student</strong> can use the same edge multiple times. Other four students can use the same edge only once.</p>
+<p md-pos="2693-2831">All five students need your help to find the path they should follow. Your task is to calculate the path that each student should follow.</p>
+<ul>
+  <li md-pos="2832-2905">The first student wants to know the shortest time to reach the summit.</li>
+  <li md-pos="2905-3028">The second student wants to know the minimum possible duration of the maximum edge he passes through in his/her journey.</li>
+  <li md-pos="3028-3131">The third student wants to know the minumum number of edges (s)he needs to pass to reach the summit.</li>
+  <li md-pos="3131-3314">The fourth student wants to know the time to reach the summit if (s)he uses the greedy algorithm mentioned above. If (s)he cannot reach the summit, you should print the value &quot;-1&quot;.</li>
+  <li md-pos="3314-3478">The fifth student wants to know the shortest time to reach the summit. At start, (s)he does not have any power, so (s)he needs to pass two edges to recharge it.</li>
+</ul>
+<p md-pos="3479-3614">To implement this project, you will be provided some code written by the assistants, which handles the reading input and output files.</p>
+<p md-pos="3615-3698">The files you will be provided are HelpStudents.h, HelpStudents.cpp, and main.cpp.</p>
+<p md-pos="3699-3914">The file you should fill is: HelpStudents.cpp. You are also allowed to change the content of HelpStudents.h. Therefore, any code written outside HelpStudents.cpp and HelpStudents.h will be useless for this project.</p>
+<h2 id="input" md-pos="3918-3923"><a href="#input" name="input">Input</a></h2>
+<p md-pos="3925-3994">In the first row of the input, there are 4 numbers. <code md-pos="3980-3989">(T N M K)</code></p>
+<ul>
+  <li md-pos="3994-4061">First number specifies which type of student(T) needs your help.</li>
+  <li md-pos="4061-4132">Second number is N, which represents the number of registered nodes.</li>
+  <li md-pos="4132-4191">Third number is M, which represents the number of edges.</li>
+  <li md-pos="4191-4266">Fourth number is K, which is the node number that represents the summit.</li>
+</ul>
+<p md-pos="4267-4324">Next M lines have 3 numbers per row. <code md-pos="4307-4320">(A_i B_i W_i)</code></p>
+<ul>
+  <li md-pos="4324-4451">Each row states that there is a path between node A_i and node B_i with weight W_i (i.e., required time to pass this path).</li>
+</ul>
+<h2 id="output" md-pos="4456-4462"><a href="#output" name="output">Output</a></h2>
+<p md-pos="4464-4559">Contains a single number, an answer according to the student's goal stated in the description.</p>
+<h2 id="constraits" md-pos="4564-4574"><a href="#constraits" name="constraits">Constraits</a></h2>
+<p md-pos="4576-4606">N (number of nodes) &lt;= 100000</p>
+<p md-pos="4607-4637">M (number of edges) &lt;= 100000</p>
+<p md-pos="4638-4764">W_i &lt;= 1000000 (<strong md-pos="4656-4759">Note that some answers may exceed integer range. You must use <code md-pos="4721-4734">long long int</code> type for the answers.</strong> )</p>
+<h2 id="grading" md-pos="4768-4775"><a href="#grading" name="grading">Grading</a></h2>
+<p md-pos="4776-4935">Each student type (from one to five) will consult you in 20% of the test cases, so you will get 20 points for the correct implementation of each student type.</p>
+<p md-pos="4936-5129">In other words, if you find correct answers for three students (with correct implementation) and find incorrect answers for other two, then you will get 60 (20x3 + 0x2) points in this project.</p>
+<h2 id="sample-input-1" md-pos="5133-5147"><a href="#sample-input-1" name="sample-input-1">Sample Input 1</a></h2>
+<pre md-pos="5149-5222"><code md-pos="5153-5218">1 6 9 5
+1 2 5
+1 3 1
+3 2 10
+1 5 25
+2 4 6
+4 5 3
+3 6 5
+2 6 7
+5 6 10
+</code></pre>
+<h2 id="sample-output-1" md-pos="5226-5241"><a href="#sample-output-1" name="sample-output-1">Sample Output 1</a></h2>
+<pre md-pos="5243-5254"><code md-pos="5247-5250">14
+</code></pre>
+<h2 id="sample-input-2" md-pos="5258-5272"><a href="#sample-input-2" name="sample-input-2">Sample Input 2</a></h2>
+<pre md-pos="5274-5347"><code md-pos="5278-5343">2 6 9 5
+1 2 5
+1 3 1
+3 2 10
+1 5 25
+2 4 6
+4 5 3
+3 6 5
+2 6 7
+5 6 10
+</code></pre>
+<h2 id="sample-output-2" md-pos="5351-5366"><a href="#sample-output-2" name="sample-output-2">Sample Output 2</a></h2>
+<pre md-pos="5368-5378"><code md-pos="5372-5374">6
+</code></pre>
+<h2 id="sample-input-3" md-pos="5382-5396"><a href="#sample-input-3" name="sample-input-3">Sample Input 3</a></h2>
+<pre md-pos="5398-5471"><code md-pos="5402-5467">3 6 9 5
+1 2 5
+1 3 1
+3 2 10
+1 5 25
+2 4 6
+4 5 3
+3 6 5
+2 6 7
+5 6 10
+</code></pre>
+<h2 id="sample-output-3" md-pos="5475-5490"><a href="#sample-output-3" name="sample-output-3">Sample Output 3</a></h2>
+<pre md-pos="5492-5502"><code md-pos="5496-5498">1
+</code></pre>
+<h2 id="sample-input-4" md-pos="5506-5520"><a href="#sample-input-4" name="sample-input-4">Sample Input 4</a></h2>
+<pre md-pos="5522-5595"><code md-pos="5526-5591">4 6 9 5
+1 2 5
+1 3 1
+3 2 10
+1 5 25
+2 4 6
+4 5 3
+3 6 5
+2 6 7
+5 6 10
+</code></pre>
+<h2 id="sample-output-4" md-pos="5599-5614"><a href="#sample-output-4" name="sample-output-4">Sample Output 4</a></h2>
+<pre md-pos="5616-5627"><code md-pos="5620-5623">43
+</code></pre>
+<h2 id="sample-input-5" md-pos="5631-5645"><a href="#sample-input-5" name="sample-input-5">Sample Input 5</a></h2>
+<pre md-pos="5647-5720"><code md-pos="5651-5716">5 6 9 5
+1 2 5
+1 3 1
+3 2 10
+1 5 25
+2 4 6
+4 5 3
+3 6 5
+2 6 7
+5 6 10
+</code></pre>
+<h2 id="sample-output-5" md-pos="5724-5739"><a href="#sample-output-5" name="sample-output-5">Sample Output 5</a></h2>
+<pre md-pos="5741-5751"><code md-pos="5745-5747">2
+</code></pre>
+<h2 id="important-notes" md-pos="5756-5771"><a href="#important-notes" name="important-notes">Important notes</a></h2>
+<ul>
+  <li md-pos="5773-5942">Your code will be compiled with <code md-pos="5808-5836">cmake CMakeLists.txt &amp;&amp; make</code> command. You are expected to make sure that your code runs in the provided virtual machine environment.</li>
+  <li md-pos="5942-6089">Your code is expected to produce the correct output in <strong md-pos="6001-6012">two seconds</strong>. Any test case that lasts more than two seconds will be counted as wrong.</li>
+  <li md-pos="6089-6233">If you get the &quot;Segmentation fault&quot; error due to recursive calls, you can try to increase stack size by using <code md-pos="6204-6220">ulimit -s 100005</code> command.</li>
+  <li md-pos="6233-6298">Examples we provide will not be used in grading your projects!</li>
+</ul>
+<h2 id="submission-policy" md-pos="6303-6320"><a href="#submission-policy" name="submission-policy">Submission Policy</a></h2>
+<p md-pos="6321-6486">You are supposed to use the Git system provided to you for all projects. No other means of submission will be accepted. Also, pay attention to the following points:</p>
+<ul>
+  <li md-pos="6487-6796">All source codes are checked automatically for similarity with other submissions and exercises from previous years. Make sure you write and submit your own code. Plagiarism and any other forms of cheating will have serious consequences, including getting “-100” as the project score and failing the course.</li>
+  <li md-pos="6796-6963">Make sure you document your code with simple inline comments and use meaningful variable names. Do not over-comment, or make your variable names unnecessarily long.</li>
+  <li md-pos="6963-7386">If you want to make any changes to your project, you should do it before the submission system closes. Your changes will not be accepted by e-mail. Connectivity problems to the Internet or to GitHub in the last few minutes are not valid excuses for being unable to submit. You should not risk leaving your submission to the last few minutes. After uploading to GitHub, check to make sure that your project appears there.</li>
+  <li md-pos="7386-7544">We will test your code with different input combinations, so we recommend you to test your code with different input combinations (written by you) as well.</li>
+  <li md-pos="7544-7583">Deadline is 3 December 2019, 23:00.</li>
+</ul>
+<p md-pos="7584-7599"><strong md-pos="7586-7596">Good luck!</strong></p>
+</div>
+</body>
+</html>
