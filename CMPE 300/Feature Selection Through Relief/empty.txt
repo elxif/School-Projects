@@ -1,0 +1,43 @@
+    2. Name your project code file as "cmpe300_mpi_studentid.c" or "cmpe300_mpi_studentid.cpp". ie. cmpe300_mpi_2008123456.c
+	4. I will compile your code with mpicc or mpic++ as below:
+
+		> mpicc -o cmpe300_mpi_studentid ./cmpe300_mpi_studentid.c
+
+		or
+
+		> mpic++ -o cmpe300_mpi_studentid ./mpipp_hellcmpe300_mpi_studentid.cpp
+
+		ie. mpicc -o cmpe300_mpi_2008123456 ./cmpe300_mpi_2008123456.c
+
+	5. I will run your code as below with -np parameter:
+
+		> mpirun --oversubscribe -np <P> cmpe300_mpi_studentid <inputfile>
+
+		or
+
+		> mpiexec --oversubscribe -np <P> cmpe300_mpi_studentid <inputfile>
+
+		ie. mpicc --oversubscribe -np 3 cmpe300_mpi_2008123456 ./input.tsv
+
+	9. Project document must have below sections: (details can be found on the professor's page)
+
+		a. Title
+
+		b. Introduction (brief like one small paragraph)
+
+		c. Program execution (how to compile and run your code, write actual commands needed)
+
+		d. Program structure (detailed part, how you handled the parallel programming and messaging to accomplish the given task)
+
+		e. Difficulties encountered (brief like one small paragraph)
+
+		f. Conclusion
+
+
+You should also mention how you compiled and run your code, which libraries (mpi, open mpi ...) - compilers (gcc, clang ...) and which versions you used.
+
+
+There are questions about diff helper function.
+You can check this example to clarify:
+
+https://medium.com/@yashdagli98/feature-selection-using-relief-algorithms-with-python-example-3c2006e18f83
