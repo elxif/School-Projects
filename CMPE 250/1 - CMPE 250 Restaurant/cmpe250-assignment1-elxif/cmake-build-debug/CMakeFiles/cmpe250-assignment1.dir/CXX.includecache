@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ea2/Desktop/content/ders/cmpe 250/Assignment/1/cmpe250-assignment1-elxif/Restaurant.cpp
+Restaurant.h
+/Users/ea2/Desktop/content/ders/cmpe 250/Assignment/1/cmpe250-assignment1-elxif/Restaurant.h
+
+/Users/ea2/Desktop/content/ders/cmpe 250/Assignment/1/cmpe250-assignment1-elxif/Restaurant.h
+iostream
+-
+vector
+-
+Table.h
+/Users/ea2/Desktop/content/ders/cmpe 250/Assignment/1/cmpe250-assignment1-elxif/Table.h
+
+/Users/ea2/Desktop/content/ders/cmpe 250/Assignment/1/cmpe250-assignment1-elxif/Table.h
+iostream
+-
+
