@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ea2/CLionProjects/cmpe250-assignment2-elxif/RestaurantOrganizer.cpp
+RestaurantOrganizer.h
+/Users/ea2/CLionProjects/cmpe250-assignment2-elxif/RestaurantOrganizer.h
+
+/Users/ea2/CLionProjects/cmpe250-assignment2-elxif/RestaurantOrganizer.h
+iostream
+-
+vector
+-
+fstream
+-
+
