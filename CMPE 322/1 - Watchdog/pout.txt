@@ -1,0 +1,31 @@
+P1 is started and it has a pid of 18646
+P2 is started and it has a pid of 18648
+P3 is started and it has a pid of 18651
+P4 is started and it has a pid of 18652
+P5 is started and it has a pid of 18653
+P6 is started and it has a pid of 18658
+P7 is started and it has a pid of 18659
+P8 is started and it has a pid of 18660
+P9 is started and it has a pid of 18661
+P10 is started and it has a pid of 18662
+P11 is started and it has a pid of 18663
+P3 is killed
+Restarting P3
+P3 is started and it has a pid of 18665
+P1 is killed, all processes must be killed
+Restarting all processes
+P1 is started and it has a pid of 18675
+P2 is started and it has a pid of 18676
+P3 is started and it has a pid of 18677
+P4 is started and it has a pid of 18679
+P5 is started and it has a pid of 18680
+P6 is started and it has a pid of 18681
+P7 is started and it has a pid of 18682
+P8 is started and it has a pid of 18683
+P9 is started and it has a pid of 18688
+P10 is started and it has a pid of 18689
+P11 is started and it has a pid of 18690
+P5 is killed
+Restarting P5
+P5 is started and it has a pid of 18692
+Watchdog is terminating gracefully
